@@ -7,7 +7,7 @@ import ReadersPage from './pages/readers/readers'
 function App() {
   return(
     <>
-    <BooksPage />
+    <ProfilePage />
     </>
   )
 }
