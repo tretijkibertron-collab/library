@@ -1,11 +1,17 @@
+import type { IReader } from "../../types/reader.types"
 import ReaderItem from "./readerItem"
 
-const ReaderList = () => {
+interface ReaderListProps {
+ readers: IReader[];
+}
+const ReaderList = ({readers}: ReaderListProps) => {
     return(
         <div className="reader-list">
-            <ReaderItem/>
-            <ReaderItem/>
-            <ReaderItem/>
+            {readers.map(reader =>{
+                return(
+                    <ReaderItem reader={reader} key={reader.id}/>
+                )
+            })}
         </div>
 
     )

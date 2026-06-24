@@ -2,6 +2,7 @@ import BookList from '../../components/books/bookList'
 import Footer from '../../components/common/footer'
 import Header from '../../components/common/header'
 import './books.css'
+import { mockBooks } from '../../mocks/books'
 
 const BooksPage = () => {
     return(
@@ -12,7 +13,7 @@ const BooksPage = () => {
       <div className="container">
         <h1 className="page-title">Каталог книг</h1>
         <p className="page-subtitle">
-          Всего книг: <strong>10</strong>
+          Всего книг: <strong>{mockBooks.length}</strong>
         </p>
 
         {/* <!-- Toolbar --> */}
@@ -25,9 +26,9 @@ const BooksPage = () => {
             />
             <button className="book-search-clear">✕</button>
           </div>
-          <span className="search-result-count">Найдено: 10</span>
+          <span className="search-result-count">Найдено: {mockBooks.length}</span>
         </div>
-        <BookList />
+        <BookList books={mockBooks}/>
         
       </div>
     </main>

@@ -1,14 +1,19 @@
+import type { IBook } from "../../types/book.types"
 import BookItem from "./bookItem"
 
-const BookList = () => {
+interface BookListProps {
+    books: IBook[];
+}
+const BookList = ({books}: BookListProps) => {
     return(
         <div className="card-grid">
-            <BookItem />
-            <BookItem />
-            <BookItem />
-            <BookItem />
-            <BookItem />
-            <BookItem />
+            {books.map((book)=>{
+                return(
+
+                    <BookItem book={book} key={book.id}/>
+                )
+
+            })}
 
         </div>
     )
