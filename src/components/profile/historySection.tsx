@@ -1,8 +1,10 @@
-const HistorySection = () => {
+
+const HistorySection = ({history}) => {
     return(
           <section className="profile-section">
             <h2 className="profile-section-title">📚 История чтения</h2>
             <div className="history-list">
+                
               <div className="history-item">
                 <span className="history-book">Война и мир</span>
                 <span className="history-date">
