@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import type { IReader } from "../../types/reader.types"
 
 interface ReaderItemProps {
@@ -17,9 +18,9 @@ const ReaderItem = ({reader}: ReaderItemProps) => {
                   📚 Активных книг: <strong>{reader.activeBooks.length}</strong>
                 </span>
               </div>
-              <a href="reader-profile.html?id=r1" className="btn btn-primary">
+              <Link to={`/readers/${reader.id}`} className="btn btn-primary">
                 Профиль
-              </a>
+              </Link>
             </div>
           </div>
     )

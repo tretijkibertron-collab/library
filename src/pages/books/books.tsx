@@ -8,7 +8,6 @@ const BooksPage = () => {
     return(
   <div className="page-wrapper">
     <Header />
-    {/* <!-- ========== MAIN ========== --> */}
     <main className="main-content">
       <div className="container">
         <h1 className="page-title">Каталог книг</h1>
@@ -16,7 +15,6 @@ const BooksPage = () => {
           Всего книг: <strong>{mockBooks.length}</strong>
         </p>
 
-        {/* <!-- Toolbar --> */}
         <div className="page-toolbar">
           <div className="book-search">
             <input 
